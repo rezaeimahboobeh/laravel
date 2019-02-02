@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -85,9 +86,9 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">اطلاعات</a>
+                    <a href="/courses">درس ها</a>
                     <a href="https://laracasts.com">تازه ها</a>
-                    <a href="https://laravel-news.com">اخبار</a>
+                    <a href="about">درباره ما</a>
                     <a href="https://nova.laravel.com">تصاویر</a>
                     <a href="https://forge.laravel.com">نشریه</a>
                     <a href="https://github.com/laravel/laravel">ورود</a>
