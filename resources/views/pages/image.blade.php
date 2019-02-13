@@ -11,14 +11,27 @@
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body class="bg-info">
-    @foreach ($address as $addres)
-<div align="center">
-  <img src="{{$addres->name}}" class="img-thumbnail" ></img>
-</div>
+  <body >
 
-
-
+<h1 style="font-family:sans-serif"  class="text-center text-danger">مشخصات دوره</h1>
+<table class="table table-striped" style="font-family:sans-serif">
+  <th dir="rtl" class="text-right bg-info">نام دوره</th>
+  <th dir="rtl" class="text-right bg-info">نام استاد</th>
+  <th dir="rtl" class="text-right bg-info">نوع دوره</th>
+  <th dir="rtl" class="text-right bg-info">ظرفیت</th>
+    <th dir="rtl" class="text-right bg-info">هزینه</th>
+  <tbody>
+      @foreach ($courseid as $coursei)
+    <tr>
+      <td>{{$coursei->courseName}}</td>
+      <td>{{$coursei->teachername}}</td>
+      <td>{{$coursei->courseTypeName}}</td>
+        <td>{{$coursei->capacity}}</td>
+        <td>{{$coursei->price}}</td>
+    </tr>
     @endforeach
-  </body>
+  </tbody>
+</table>
+</div>
+</body>
 </html>

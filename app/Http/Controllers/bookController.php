@@ -8,9 +8,11 @@ use App\Quotation;
 
 class bookController extends Controller
 {
-  public function pic($bookID)
+  public function ID($courseID)
   {
-      $address=DB::table('address')->where ('bookID', $bookID)->get();
-    return view('pages.image', compact('address'));
+      $courseid=DB::table('courses')->join('coursetype','courses.courseTypeID','=','coursetype.id')
+      ->join('courseteacher','courses.teacherUserID','=','courseteacher.id')
+      ->where ('courses.id', $courseID)->get();
+    return view('pages.image', compact('courseid'));
   }
 }

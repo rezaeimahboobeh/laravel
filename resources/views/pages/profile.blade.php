@@ -16,22 +16,22 @@
     <title>درس ها</title>
   </head>
   <body>
-    <h1 class="text-center text-danger" style="font-family:sans-serif">نام دوره ها</h1>
+    @if (auth::check())
+
+
+    <h1 class="text-center text-danger" style="font-family:sans-serif">پروفایل شما</h1>
 <br>
-    <table class="table table-striped " dir="rtl" style="font-family:sans-serif">
-      <thead >
-        <th dir="rtl" class="text-right" >نام دوره</th>
+  <div class="text-right">
 
-      </thead>
-      <tbody>
-        @foreach ($courses as $course)
-          <tr>
-            <td class="col-lg-4"><a href="{{action('bookController@ID', $course->id) }}">{{$course->courseName}}</td>
+@foreach($name as $nam)
 
-          </tr>
-
+    {{$nam->name}}
 @endforeach
-      </tbody>
-    </table>
+  </div>
+  @else
+    You are not signed in.
+  @endif
+
+
   </body>
 </html>

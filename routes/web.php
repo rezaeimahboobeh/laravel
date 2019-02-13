@@ -19,4 +19,9 @@ Route::get('/',function() {
   return view('welcome');
 });
 
-Route::get('/courses/{bookID}','bookController@pic');
+Route::get('/courses/{courseid}','bookController@ID');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profile','profile@profile' );

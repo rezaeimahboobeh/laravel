@@ -9,7 +9,7 @@ use App\Quotation;
 class pagescontroller extends Controller
 {
     public function course(){
-      $address=DB::table('address')->get();
-       return view('pages.courses', compact('address'));
+      $courses=DB::table('courses')->get();
+       return view('pages.courses', compact('courses'));
     }
 }
